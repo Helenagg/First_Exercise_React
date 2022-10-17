@@ -3,16 +3,18 @@ import ReactDom from "react-dom";
 import propTypes from "prop-types";
 
 const Card = (props) => {
-    <>
-        <div className="card" style="width: 18rem;">
-            <img src={props.image} class="card-img-top" alt={props.textImage}/>
-            <div className="card-body">
-                <h5 className="card-title">{props.cardTitle}</h5>
-                <p className="card-text">{props.cardText}</p>
-                <a href="#" classNameass="btn btn-primary">{props.cardButton}</a>
+    return (
+        <div className="container d-flex">
+            <div className="card text-center"  style={{width: 250}}>
+                <img src={props.image} className="card-img-top" alt="Image Card"/>
+                <div className="card-body">
+                    <h5 className="card-title">{props.cardTitle}</h5>
+                    <p className="card-text">{props.cardText}</p>
+                    <a href="#" className="btn btn-primary">{props.cardButton}</a>
+                </div>
             </div>
-        </div>
-    </>
+        </div> 
+    );    
 }
 
 export default Card;
